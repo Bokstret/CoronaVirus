@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class GetPoints : MonoBehaviour
 {
     HUD hud;
     const int reward = 1;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,8 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Destroy(gameObject);
         hud.AddPoints(reward);
+
+        
+        
     }
 }

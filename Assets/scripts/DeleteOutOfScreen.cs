@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScreenWrapper : MonoBehaviour
+public class DeleteOutOfScreen : MonoBehaviour
 {
   
     float colliderRadius;
@@ -22,11 +23,19 @@ public class ScreenWrapper : MonoBehaviour
         if (location.x + colliderRadius < ScreenUtils.ScreenLeft ||
             location.x - colliderRadius > ScreenUtils.ScreenRight)
         {
+            if (gameObject.CompareTag("Ill"))
+            {
+                Application.Quit();
+            }
             Destroy(gameObject); 
         }
         if (location.y - colliderRadius > ScreenUtils.ScreenTop ||
             location.y + colliderRadius < ScreenUtils.ScreenBottom)
         {
+            if (gameObject.CompareTag("Ill"))
+            {
+                Application.Quit();
+            }
             Destroy(gameObject);
         }
 
