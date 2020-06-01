@@ -63,13 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\scripts\Asteroid.cs" />
     <Compile Include="Assets\scripts\DeleteOutOfScreen.cs" />
     <Compile Include="Assets\scripts\Direction.cs" />
     <Compile Include="Assets\scripts\GameInitializer.cs" />
+    <Compile Include="Assets\scripts\GetPoints.cs" />
     <Compile Include="Assets\scripts\HUD.cs" />
-    <Compile Include="Assets\scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\scripts\Human.cs" />
     <Compile Include="Assets\scripts\ScreenUtils.cs" />
+    <Compile Include="Assets\scripts\Spawner.cs" />
     <Compile Include="Assets\scripts\Timer.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/hp/Desktop/Corona/CoronaVirus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
