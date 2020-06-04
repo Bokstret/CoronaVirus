@@ -1,38 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Human : MonoBehaviour
 {
     [SerializeField]
-    Sprite Human1;
-    [SerializeField]
-    Sprite Human2;
-    [SerializeField]
-    Sprite HumanIll;
+    Sprite HumanSkin;
+    
 
+
+    public float Speed = 5f;
+    
     void Start()
     {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        int spriteNumber = Random.Range(0, 2);
-
-        if (spriteNumber == 1)
-        {
-            spriteRenderer.sprite = Human1;
-        }
-        else
-        {
-            spriteRenderer.sprite = Human2;
-        }
+        
     }
 
     public void Initialize(Direction direction, Vector3 position)
     {
-        
-
+ 
         transform.position = position;
 
-   
         float angle;
         float randomAngle = Random.value * 30f * Mathf.Deg2Rad;
 
@@ -46,18 +35,26 @@ public class Human : MonoBehaviour
         }
 
 
-        const float MinImpulseForce = 3f;
-        const float MaxImpulseForce = 5f;
-        Vector2 moveDirection = new Vector2(
-            Mathf.Cos(angle), Mathf.Sin(angle));
-        float magnitude = Random.Range(MinImpulseForce, MaxImpulseForce);
-        GetComponent<Rigidbody2D>().AddForce(
-            moveDirection * magnitude,
-            ForceMode2D.Impulse);
+        Vector2 moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+        GetComponent<Rigidbody2D>().AddForce(moveDirection * 2, ForceMode2D.Impulse);
+
+        
+
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if (gameObject.CompareTag("IllL") | gameObject.CompareTag("notIllL"))
+        {
+            Vector2 target = new Vector2(transform.position.x + 1, transform.position.y);
+            float step = Speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, target, step);
+        }
+        else
+        {
+            Vector2 target = new Vector2(transform.position.x - 1, transform.position.y);
+            float step = Speed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, target, step);
+        }
     }
 }

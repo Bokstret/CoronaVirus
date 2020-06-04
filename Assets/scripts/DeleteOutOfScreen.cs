@@ -23,7 +23,7 @@ public class DeleteOutOfScreen : MonoBehaviour
         if (location.x + colliderRadius < ScreenUtils.ScreenLeft ||
             location.x - colliderRadius > ScreenUtils.ScreenRight)
         {
-            if (gameObject.CompareTag("Ill"))
+            if (gameObject.CompareTag("IllL") | gameObject.CompareTag("IllR"))
             {
                 Application.Quit();
             }
@@ -32,7 +32,7 @@ public class DeleteOutOfScreen : MonoBehaviour
         if (location.y - colliderRadius > ScreenUtils.ScreenTop ||
             location.y + colliderRadius < ScreenUtils.ScreenBottom)
         {
-            if (gameObject.CompareTag("Ill"))
+            if (gameObject.CompareTag("IllL") | gameObject.CompareTag("IllR"))
             {
                 Application.Quit();
             }
