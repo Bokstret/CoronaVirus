@@ -41,16 +41,16 @@ public class Spawner : MonoBehaviour
             if (location == 0)
             {
 
-                position.y = ScreenUtils.ScreenTop - 3;
+                position.y = ScreenUtils.ScreenTop - 8;
             }
             else if (location == 1)
             {
 
-                position.y = (ScreenUtils.ScreenBottom + screenHeight / 2) - 0.5f;
+                position.y = (ScreenUtils.ScreenBottom + screenHeight / 2) - 3.5f;
             }
             else
             {
-                position.y = ScreenUtils.ScreenBottom + 0.5f;
+                position.y = ScreenUtils.ScreenBottom + 1.5f;
             }
 
             if (side == 0)

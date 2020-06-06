@@ -9,6 +9,9 @@ TagManager:
   - IllR
   - notIllL
   - notIllR
+  - MenuCamera
+  - Menu
+  - Pause
   layers:
   - Default
   - TransparentFX
