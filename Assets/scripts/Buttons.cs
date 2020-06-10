@@ -1,21 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour
 {
+    GameObject[] gameObjects;
     Spawner spawner;
-    Canvas hud;
-    Canvas menu;
-    Canvas pause;
-    void Start()
-    {   pause = GameObject.FindGameObjectWithTag("Pause").GetComponent<Canvas>();
-        spawner = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Spawner>();
-        hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<Canvas>();
-        menu = GameObject.FindGameObjectWithTag("Menu").GetComponent<Canvas>();
+    GetPoints clickScript;
+    HUD hud;
+    Canvas info;
+    GameObject start;
+    GameObject pause;
+    GameObject resume;
+    GameObject restart;
 
+    void Start()
+    {
+        start = GameObject.Find("Start");
+        pause = GameObject.Find("Pause");
+        resume = GameObject.Find("Resume");
+        restart = GameObject.Find("Restart");
+        spawner = GameObject.Find("Main Camera").GetComponent<Spawner>();
+        info = GameObject.FindGameObjectWithTag("HUD").GetComponent<Canvas>();
+        hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>();
+
+        pause.SetActive(false);
+        resume.SetActive(false);
+        restart.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,19 +41,67 @@ public class Buttons : MonoBehaviour
 
     public void StartGame()
     {
-        Time.timeScale = 1;
-        pause.enabled = true;
+
+        pause.SetActive(true);
         spawner.enabled = true;
-        menu.enabled = false;
-        hud.enabled = true;
+        start.SetActive(false);
+        info.enabled = true;
     }
 
     public void PauseGame()
     {
+        gameObjects = FindObjectsOfType(typeof(GameObject)) as GameObject[];
+        foreach (GameObject obj in gameObjects)
+        {
+            if (obj.layer == 8)
+            {
+                obj.GetComponent<Collider2D>().enabled = false;
+            }
+        }
         Time.timeScale = 0;
-        pause.enabled = false;
+        pause.SetActive(false);
         spawner.enabled = false;
-        menu.enabled = true;
-        hud.enabled = false;
+        resume.SetActive(true);
+        restart.SetActive(true);
+        info.enabled = false;
+    }
+
+    public void ResumeGame()
+    {
+        gameObjects = FindObjectsOfType(typeof(GameObject)) as GameObject[];
+        foreach (GameObject obj in gameObjects)
+        {
+            if (obj.layer == 8)
+            {
+                obj.GetComponent<Collider2D>().enabled = true;
+            }
+        }
+        Time.timeScale = 1;
+        pause.SetActive(true);
+        spawner.enabled = true;
+        start.SetActive(false);
+        info.enabled = true;
+        resume.SetActive(false);
+        restart.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        gameObjects = FindObjectsOfType(typeof(GameObject)) as GameObject[];
+        foreach (GameObject obj in gameObjects)
+        {
+            if (obj.layer == 8)
+            {
+                Destroy(obj);
+            }
+        }
+        hud.SetPointsToZero();
+        Time.timeScale = 1;
+        pause.SetActive(true);
+        spawner.enabled = true;
+        start.SetActive(false);
+        info.enabled = true;
+        resume.SetActive(false);
+        restart.SetActive(false);
     }
 }

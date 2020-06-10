@@ -28,4 +28,14 @@ public class Menu : MonoBehaviour
     {
         script.PauseGame();
     }
+
+    public void ResumePressed()
+    {
+        script.ResumeGame();
+    }
+
+    public void RestartPressed()
+    {
+        script.RestartGame();
+    }
 }

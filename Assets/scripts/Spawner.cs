@@ -20,6 +20,7 @@ public class Spawner : MonoBehaviour
         timer = gameObject.AddComponent<Timer>();
         timer.Duration = 3;
         timer.Run();
+
     }
 
     // Update is called once per frame

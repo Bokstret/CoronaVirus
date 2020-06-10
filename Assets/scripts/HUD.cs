@@ -13,8 +13,8 @@ public class HUD : MonoBehaviour
     [SerializeField]
     Text coinsText;
     int score = 0;
-    int coinStatus = 0; //when status = 3 then make it 0 and give 1 coin to the player 
     int coins = 0;
+    int coinStatus = 0; //when status = 3 then make it 0 and give 1 coin to the player 
     const string ScorePrefix = "Score: ";
     const string CoinsPrefix = "Coins: ";
 
@@ -39,6 +39,14 @@ public class HUD : MonoBehaviour
             
         }
     }
+
+    public void SetPointsToZero()
+    {
+        score = 0;
+        coinStatus = 0;
+        scoreText.text = ScorePrefix + " 0";
+    }
+
     void Update()
     {
         
