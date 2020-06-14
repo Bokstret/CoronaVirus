@@ -11,7 +11,6 @@ public class DeleteOutOfScreen : MonoBehaviour
     
     void Start()
     {
-        
         colliderRadius = gameObject.GetComponent<CircleCollider2D>().radius;
     }
 

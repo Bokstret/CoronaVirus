@@ -10,7 +10,6 @@ public class Buttons : MonoBehaviour
 {
     GameObject[] gameObjects;
     Spawner spawner;
-    GetPoints clickScript;
     HUD hud;
     Canvas info;
     GameObject start;
@@ -95,7 +94,7 @@ public class Buttons : MonoBehaviour
                 Destroy(obj);
             }
         }
-        hud.SetPointsToZero();
+        hud.Restart();
         Time.timeScale = 1;
         pause.SetActive(true);
         spawner.enabled = true;

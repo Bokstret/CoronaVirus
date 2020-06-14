@@ -11,12 +11,14 @@ public class Spawner : MonoBehaviour
 
 
 
-    Vector2 position = new Vector2(0, 0);
+    Vector3 position = new Vector3(0, 0, 0);
     Timer timer;
     
-
+    float koef;
     void Start()
     {
+        koef = Menu.koef;
+
         timer = gameObject.AddComponent<Timer>();
         timer.Duration = 3;
         timer.Run();
@@ -28,30 +30,34 @@ public class Spawner : MonoBehaviour
     {
         if (timer.Finished)
         {
+            print(koef);
             GameObject human = Instantiate<GameObject>(prefabNotIll);
             CircleCollider2D collider = human.GetComponent<CircleCollider2D>();
             float humanRadius = collider.radius;
             Destroy(human);
 
-            float screenHeight = ScreenUtils.ScreenTop - ScreenUtils.ScreenBottom;
-            float screenWidth = ScreenUtils.ScreenRight - ScreenUtils.ScreenLeft;
+
             int illOrNot = Random.Range(0, 3);
             int side = Random.Range(0, 2);
             int location = Random.Range(0, 3);
-            
+            int chooseSprite = Random.Range(0, 3);
+           
+
             if (location == 0)
             {
 
-                position.y = ScreenUtils.ScreenTop - 8;
+                position.y = -1.231f * koef;
+                position.z = 0;
             }
             else if (location == 1)
             {
-
-                position.y = (ScreenUtils.ScreenBottom + screenHeight / 2) - 3.5f;
+                position.y = -0.881f * koef;
+                position.z = 1;
             }
             else
             {
-                position.y = ScreenUtils.ScreenBottom + 1.5f;
+                position.y = -0.538f* koef;
+                position.z = 2;
             }
 
             if (side == 0)
@@ -62,6 +68,7 @@ public class Spawner : MonoBehaviour
                 {
                     
                     human = Instantiate<GameObject>(prefabIll);
+                    human.transform.localScale = new Vector3(koef, koef, 1);
                     Vector3 theScale = human.transform.localScale;
                     theScale.x *= -1;
                     human.transform.localScale = theScale;
@@ -74,6 +81,7 @@ public class Spawner : MonoBehaviour
                 else
                 {
                     human = Instantiate<GameObject>(prefabNotIll);
+                    human.transform.localScale = new Vector3(koef, koef, 1);
                     Vector3 theScale = human.transform.localScale;
                     theScale.x *= -1;
                     human.transform.localScale = theScale;
@@ -91,6 +99,7 @@ public class Spawner : MonoBehaviour
                 if (illOrNot == 0)
                 {
                     human = Instantiate<GameObject>(prefabIll);
+                    human.transform.localScale = new Vector3(koef, koef, 1);
                     Human script = human.GetComponent<Human>();
                     script.Initialize(Direction.Left, new Vector2(position.x, position.y));
                     human.tag = "IllR";
@@ -99,6 +108,7 @@ public class Spawner : MonoBehaviour
                 else
                 {
                     human = Instantiate<GameObject>(prefabNotIll);
+                    human.transform.localScale = new Vector3(koef, koef, 1);
                     Human script = human.GetComponent<Human>();
                     script.Initialize(Direction.Left, new Vector2(position.x, position.y));
                     human.tag = "notIllR";

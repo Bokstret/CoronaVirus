@@ -71,7 +71,6 @@
     <Compile Include="Assets\scripts\HUD.cs" />
     <Compile Include="Assets\scripts\Human.cs" />
     <Compile Include="Assets\scripts\Menu.cs" />
-    <Compile Include="Assets\scripts\OrientationSetter.cs" />
     <Compile Include="Assets\scripts\ScreenUtils.cs" />
     <Compile Include="Assets\scripts\Spawner.cs" />
     <Compile Include="Assets\scripts\Timer.cs" />

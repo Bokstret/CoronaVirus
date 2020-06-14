@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 114905457090510082}
   - component: {fileID: 114109957859571570}
   - component: {fileID: 95770104847758830}
+  - component: {fileID: 362424841808103548}
   m_Layer: 8
   m_Name: Ill1
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 6226346887369766822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.4465752, y: 2.792778, z: 2}
-  m_LocalScale: {x: 4, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -119,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009463638, y: -0.07765889}
+  m_Offset: {x: 0, y: -0.06}
   serializedVersion: 2
-  m_Radius: 0.22737405
+  m_Radius: 0.24608603
 --- !u!114 &114330943397536950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,3 +180,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!362 &362424841808103548
+WorldAnchor:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226346887369766822}
+  serializedVersion: 2
