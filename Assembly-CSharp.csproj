@@ -65,7 +65,6 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\Buttons.cs" />
     <Compile Include="Assets\scripts\DeleteOutOfScreen.cs" />
-    <Compile Include="Assets\scripts\Direction.cs" />
     <Compile Include="Assets\scripts\GameInitializer.cs" />
     <Compile Include="Assets\scripts\GetPoints.cs" />
     <Compile Include="Assets\scripts\HUD.cs" />

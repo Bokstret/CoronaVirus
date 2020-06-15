@@ -9,32 +9,6 @@ public class Human : MonoBehaviour
     Sprite HumanSkin;
     
     public float Speed = 5f;
-    float koef;
-    void Start()
-    {
-        koef = Menu.koef; 
-    }
-
-    public void Initialize(Direction direction, Vector3 position)
-    {
-        transform.position = position;
-
-        float angle;
-        float randomAngle = Random.value * 30f * Mathf.Deg2Rad;
-
-        if (direction == Direction.Left)
-        {
-            angle = 165 * Mathf.Deg2Rad + randomAngle;
-        }
-        else
-        {
-            angle = -15 * Mathf.Deg2Rad + randomAngle;
-        }
-
-
-        Vector2 moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-        GetComponent<Rigidbody2D>().AddForce(moveDirection * 2, ForceMode2D.Impulse);
-    }
 
     private void FixedUpdate()
     {

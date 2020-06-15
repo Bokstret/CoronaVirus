@@ -8,12 +8,10 @@ public class DeleteOutOfScreen : MonoBehaviour
   
     float colliderRadius;
 
-    
     void Start()
     {
         colliderRadius = gameObject.GetComponent<CircleCollider2D>().radius;
     }
-
    
     void OnBecameInvisible()
     {
@@ -28,16 +26,6 @@ public class DeleteOutOfScreen : MonoBehaviour
             }
             Destroy(gameObject); 
         }
-        if (location.y - colliderRadius > ScreenUtils.ScreenTop ||
-            location.y + colliderRadius < ScreenUtils.ScreenBottom)
-        {
-            if (gameObject.CompareTag("IllL") | gameObject.CompareTag("IllR"))
-            {
-                Application.Quit();
-            }
-            Destroy(gameObject);
-        }
-
-       
+        
     }
 }

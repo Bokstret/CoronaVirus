@@ -10,7 +10,6 @@ public class GetPoints : MonoBehaviour
     Animator anim;
     const int reward = 1;
 
-    // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -19,11 +18,6 @@ public class GetPoints : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnMouseDown()
     {
         human.enabled = false;
@@ -41,6 +35,7 @@ public class GetPoints : MonoBehaviour
         Invoke("Kill", 0.5f);
 
     }
+
     void Kill()
     {
         Destroy(gameObject);
