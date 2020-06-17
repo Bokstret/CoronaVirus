@@ -44,6 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Buttons
+    uniqueID: 560302165
+    locked: 0
+  - name: CustomUI
+    uniqueID: 2550964225
+    locked: 0
   - name: Background
     uniqueID: 774751283
     locked: 0

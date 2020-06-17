@@ -11,17 +11,23 @@ public class Buttons : MonoBehaviour
     GameObject[] gameObjects;
     Spawner spawner;
     Canvas info;
-    GameObject start;
     GameObject pause;
     GameObject resume;
+    UnityEngine.UI.Image man;
+    GameObject startButton;
+    Text title;
+    Text tap;
 
     void Start()
     {
-        start = GameObject.Find("Start");
         pause = GameObject.Find("Pause");
         resume = GameObject.Find("Resume");
+        startButton = GameObject.Find("Start");
         spawner = GameObject.Find("Main Camera").GetComponent<Spawner>();
         info = GameObject.FindGameObjectWithTag("HUD").GetComponent<Canvas>();
+        title = GameObject.Find("Title").GetComponent<Text>();
+        tap = GameObject.Find("StartText").GetComponent<Text>();
+        man = GameObject.Find("PreviewMan").GetComponent<UnityEngine.UI.Image>();
 
         pause.SetActive(false);
         resume.SetActive(false);
@@ -29,10 +35,13 @@ public class Buttons : MonoBehaviour
 
     public void StartGame()
     {
+        startButton.SetActive(false);
         pause.SetActive(true);
         spawner.enabled = true;
-        start.SetActive(false);
         info.enabled = true;
+        title.enabled = false;
+        tap.enabled = false;
+        man.enabled = false;
     }
 
     public void PauseGame()
@@ -50,7 +59,6 @@ public class Buttons : MonoBehaviour
         pause.SetActive(false);
         spawner.enabled = false;
         resume.SetActive(true);
-        info.enabled = false;
     }
 
     public void ResumeGame()
@@ -67,8 +75,6 @@ public class Buttons : MonoBehaviour
 
         pause.SetActive(true);
         spawner.enabled = true;
-        start.SetActive(false);
-        info.enabled = true;
         resume.SetActive(false);
     }
 
