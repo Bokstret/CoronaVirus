@@ -10,13 +10,16 @@ public class Buttons : MonoBehaviour
 {
     GameObject[] gameObjects;
     Spawner spawner;
-    Canvas info;
     GameObject pause;
     GameObject resume;
     UnityEngine.UI.Image man;
+    UnityEngine.UI.Image coin;
     GameObject startButton;
     Text title;
     Text tap;
+    Text best;
+    Text score;
+    Text coins;
 
     void Start()
     {
@@ -24,10 +27,15 @@ public class Buttons : MonoBehaviour
         resume = GameObject.Find("Resume");
         startButton = GameObject.Find("Start");
         spawner = GameObject.Find("Main Camera").GetComponent<Spawner>();
-        info = GameObject.FindGameObjectWithTag("HUD").GetComponent<Canvas>();
         title = GameObject.Find("Title").GetComponent<Text>();
         tap = GameObject.Find("StartText").GetComponent<Text>();
         man = GameObject.Find("PreviewMan").GetComponent<UnityEngine.UI.Image>();
+        best = GameObject.Find("Best").GetComponent<Text>();
+        score = GameObject.Find("scoreText").GetComponent<Text>();
+        coins = GameObject.Find("coinsText").GetComponent<Text>();
+        coin = GameObject.Find("Coin").GetComponent<UnityEngine.UI.Image>();
+
+
 
         pause.SetActive(false);
         resume.SetActive(false);
@@ -38,10 +46,13 @@ public class Buttons : MonoBehaviour
         startButton.SetActive(false);
         pause.SetActive(true);
         spawner.enabled = true;
-        info.enabled = true;
         title.enabled = false;
         tap.enabled = false;
         man.enabled = false;
+        best.enabled = false;
+        score.enabled = true;
+        coins.enabled = true;
+        coin.enabled = true;
     }
 
     public void PauseGame()

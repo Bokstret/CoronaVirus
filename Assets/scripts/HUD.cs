@@ -16,14 +16,14 @@ public class HUD : MonoBehaviour
 
     int score = 0;
     int coinStatus = 0; //when status = 3 then make it 0 and give 1 coin to the player 
-    const string BestPrefix = "Record: ";
+    const string BestPrefix = "Best: ";
 
     void Start()
     {
         //PlayerPrefs.SetInt("Coins", 0);
         //PlayerPrefs.SetInt("BestScore", 0);
         scoreText.text = score.ToString();
-        //bestText.text = BestPrefix + PlayerPrefs.GetInt("BestScore").ToString();
+        bestText.text = BestPrefix + PlayerPrefs.GetInt("BestScore").ToString();
         coinsText.text = PlayerPrefs.GetInt("Coins").ToString();
     }
 
@@ -32,11 +32,11 @@ public class HUD : MonoBehaviour
         score += points;
         scoreText.text = score.ToString();
         
-        /*if (score > PlayerPrefs.GetInt("BestScore"))
+        if (score > PlayerPrefs.GetInt("BestScore"))
         {
             PlayerPrefs.SetInt("BestScore", score);
             bestText.text = BestPrefix + PlayerPrefs.GetInt("BestScore").ToString();
-        }*/
+        }
         coinStatus += 1;
         if (coinStatus == 3)
         {

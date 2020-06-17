@@ -32,7 +32,7 @@ public class GetPoints : MonoBehaviour
         {
             Application.Quit();
         }
-        Invoke("Kill", 0.5f);
+        Invoke("Kill", 0.4f);
 
     }
 
