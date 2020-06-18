@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 548}
   m_MaxSize: {x: 22006, y: 14024}
   vertical: 1
-  controlID: 170
+  controlID: 14
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 548}
   m_MaxSize: {x: 22006, y: 14024}
   vertical: 0
-  controlID: 171
+  controlID: 15
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 636, y: 548}
   m_MaxSize: {x: 18006, y: 14024}
   vertical: 1
-  controlID: 100
+  controlID: 29
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 636, y: 448}
   m_MaxSize: {x: 18006, y: 10024}
   vertical: 0
-  controlID: 78
+  controlID: 30
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 448}
   m_MaxSize: {x: 4004, y: 8048}
   vertical: 1
-  controlID: 57
+  controlID: 31
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -535,18 +535,18 @@ MonoBehaviour:
     m_ExpandedIDs: ffffffff00000000ea260000f426000076290000062a0000902c0000922c0000942c0000962c0000982c00009a2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: HUD
-      m_OriginalName: HUD
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 9336
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
@@ -616,9 +616,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ec2a0000
-      m_LastClickedID: 10988
-      m_ExpandedIDs: defbffffec2a0000002b00002a2b00003c2b0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: defbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
