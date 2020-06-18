@@ -56,7 +56,19 @@ public class Buttons : MonoBehaviour
         pause.SetActive(false);
         resume.SetActive(false);
         backButton.SetActive(false);
-        soundOn.SetActive(false);
+        if (PlayerPrefs.GetInt("SoundOn") == 0)
+        {
+            audio.enabled = false;
+            soundOn.SetActive(true);
+            soundOff.SetActive(false);
+        }
+        else
+        {
+            audio.enabled = true;
+            soundOn.SetActive(false);
+            soundOff.SetActive(true);
+        }
+        
     }
 
     public void StartGame()
@@ -164,6 +176,7 @@ public class Buttons : MonoBehaviour
         soundOn.SetActive(true);
         soundOff.SetActive(false);
         audio.enabled = false;
+        PlayerPrefs.SetInt("SoundOn", 0);
     }
 
     public void SoundOn()
@@ -171,6 +184,7 @@ public class Buttons : MonoBehaviour
         soundOn.SetActive(false);
         soundOff.SetActive(true);
         audio.enabled = true;
+        PlayerPrefs.SetInt("SoundOn", 1);
     }
 
 }

@@ -289,14 +289,14 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Unity/2018.4.20f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/hp/Documents/GitHub/CoronaVirus/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>C:/Users/hp/Documents/GitHub/CoronaVirus/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Monetization.Editor">
       <HintPath>C:/Users/hp/Documents/GitHub/CoronaVirus/Assets/UnityAds/UnityEngine.Monetization.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>C:/Users/hp/Documents/GitHub/CoronaVirus/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/Unity/2018.4.20f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
