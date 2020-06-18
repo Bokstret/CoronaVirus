@@ -9,7 +9,6 @@ TagManager:
   - IllR
   - notIllL
   - notIllR
-  - MenuCamera
   layers:
   - Default
   - TransparentFX

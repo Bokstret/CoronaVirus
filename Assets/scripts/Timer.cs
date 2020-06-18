@@ -11,12 +11,9 @@ public class Timer : MonoBehaviour
 	bool started = false;
 	
 	public float Duration {
-		set {
-			if (!running) 
-			{
-				totalSeconds = value;
-			}
-		}
+		set { totalSeconds = value;}
+		
+		get { return totalSeconds; }
 	}
 	
 	public bool Finished {

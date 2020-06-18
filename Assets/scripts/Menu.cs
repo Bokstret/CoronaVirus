@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
     
     void Start()
     {
-        script = GameObject.FindGameObjectWithTag("MenuCamera").GetComponent<Buttons>();
+        script = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Buttons>();
     }
 
     public void StartPressed()
@@ -26,5 +26,20 @@ public class Menu : MonoBehaviour
     public void ResumePressed()
     {
         script.ResumeGame();
+    }
+
+    public void BackToMenuPressed()
+    {
+        script.BackToMenu();
+    }
+
+    public void SoundOffPressed()
+    {
+        script.SoundOff();
+    }
+
+    public void SoundOnPressed()
+    {
+        script.SoundOn();
     }
 }

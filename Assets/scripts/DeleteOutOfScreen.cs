@@ -7,10 +7,12 @@ public class DeleteOutOfScreen : MonoBehaviour
 {
   
     float colliderRadius;
+    Buttons script;
 
     void Start()
     {
         colliderRadius = gameObject.GetComponent<CircleCollider2D>().radius;
+        script = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Buttons>();
     }
    
     void OnBecameInvisible()
@@ -22,7 +24,7 @@ public class DeleteOutOfScreen : MonoBehaviour
         {
             if (gameObject.CompareTag("IllL") | gameObject.CompareTag("IllR"))
             {
-                Application.Quit();
+                script.LoseGame();
             }
             Destroy(gameObject); 
         }

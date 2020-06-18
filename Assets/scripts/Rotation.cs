@@ -16,7 +16,7 @@ public class Rotation : MonoBehaviour
     int flag = 0;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         if (transform.rotation.eulerAngles.z >= angle & transform.rotation.eulerAngles.z <= 360 - angle)

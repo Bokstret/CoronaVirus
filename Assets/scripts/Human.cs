@@ -14,15 +14,15 @@ public class Human : MonoBehaviour
     {
         if (gameObject.CompareTag("IllL") | gameObject.CompareTag("notIllL"))
         {
-            Vector2 target = new Vector2(transform.position.x + 1, transform.position.y);
+            Vector3 target = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
             float step = Speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, target, step);
+            transform.position = Vector3.MoveTowards(transform.position, target, step);
         }
         else
         {
-            Vector2 target = new Vector2(transform.position.x - 1, transform.position.y);
+            Vector3 target = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
             float step = Speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, target, step);
+            transform.position = Vector3.MoveTowards(transform.position, target, step);
         }
     }
 }
