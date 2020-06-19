@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 548}
   m_MaxSize: {x: 22006, y: 14024}
   vertical: 1
-  controlID: 14
+  controlID: 110
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 548}
   m_MaxSize: {x: 22006, y: 14024}
   vertical: 0
-  controlID: 15
+  controlID: 111
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 636, y: 548}
   m_MaxSize: {x: 18006, y: 14024}
   vertical: 1
-  controlID: 29
+  controlID: 112
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 636, y: 448}
   m_MaxSize: {x: 18006, y: 10024}
   vertical: 0
-  controlID: 30
+  controlID: 113
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 448}
   m_MaxSize: {x: 4004, y: 8048}
   vertical: 1
-  controlID: 31
+  controlID: 114
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -491,8 +491,7 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/scripts
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -618,7 +617,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: defbffff
+      m_ExpandedIDs: 4aecffff66ecffff7cecffff82ecffff18edffff34edffff4aedffff84eefffff6f0ffff12f1ffff28f1ffff2af1ffff0af2ffff26f2ffff3cf2ffff42f2ffffeef2ffff0af3ffff20f3ffff5af4ffffb0f9ffffccf9ffffe2f9ffff14fbffffdefbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

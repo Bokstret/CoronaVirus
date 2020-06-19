@@ -140,12 +140,11 @@ public class Buttons : MonoBehaviour
         scoreLose.enabled = true;
         Continue.enabled = true;
 
-        chudishe += 1;
-
-        if (chudishe % 3 == 0)
+        if (chudishe % 4 == 0)
         {
             Advertisement.Show();
         }
+        chudishe += 1;
     }
 
     public void BackToMenu()
